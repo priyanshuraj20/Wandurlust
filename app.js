@@ -117,6 +117,10 @@ app.use((err, req, res, next) => {
   // res.send("Something went wrong ");
 });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 app.listen(8080, () => {
   console.log("server is listeneing to port 8080");
 });
